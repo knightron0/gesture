@@ -16,6 +16,8 @@
 		7122938129A9D6CD00C2AD1C /* gestureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122938029A9D6CD00C2AD1C /* gestureTests.swift */; };
 		7122938B29A9D6CD00C2AD1C /* gestureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122938A29A9D6CD00C2AD1C /* gestureUITests.swift */; };
 		7122938D29A9D6CD00C2AD1C /* gestureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122938C29A9D6CD00C2AD1C /* gestureUITestsLaunchTests.swift */; };
+		7122939A29A9EB9B00C2AD1C /* learnASL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122939929A9EB9B00C2AD1C /* learnASL.swift */; };
+		712293A429AA8B2000C2AD1C /* detect.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 712293A329AA8B2000C2AD1C /* detect.mlpackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		7122938629A9D6CD00C2AD1C /* gestureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gestureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7122938A29A9D6CD00C2AD1C /* gestureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gestureUITests.swift; sourceTree = "<group>"; };
 		7122938C29A9D6CD00C2AD1C /* gestureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gestureUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7122939929A9EB9B00C2AD1C /* learnASL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = learnASL.swift; sourceTree = "<group>"; };
+		712293A329AA8B2000C2AD1C /* detect.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = detect.mlpackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +102,12 @@
 		7122936929A9D6CC00C2AD1C /* gesture */ = {
 			isa = PBXGroup;
 			children = (
+				712293A329AA8B2000C2AD1C /* detect.mlpackage */,
 				7122936A29A9D6CC00C2AD1C /* AppDelegate.swift */,
 				7122936C29A9D6CC00C2AD1C /* ViewController.swift */,
 				7122936E29A9D6CC00C2AD1C /* Experience.rcproject */,
 				7122937029A9D6CC00C2AD1C /* Main.storyboard */,
+				7122939929A9EB9B00C2AD1C /* learnASL.swift */,
 				7122937329A9D6CD00C2AD1C /* Assets.xcassets */,
 				7122937529A9D6CD00C2AD1C /* LaunchScreen.storyboard */,
 			);
@@ -256,9 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712293A429AA8B2000C2AD1C /* detect.mlpackage in Sources */,
 				7122936D29A9D6CC00C2AD1C /* ViewController.swift in Sources */,
 				7122936B29A9D6CC00C2AD1C /* AppDelegate.swift in Sources */,
 				7122936F29A9D6CC00C2AD1C /* Experience.rcproject in Sources */,
+				7122939A29A9EB9B00C2AD1C /* learnASL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
