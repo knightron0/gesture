@@ -992,3 +992,8 @@ ul.social_icon li a:hover {
 .hand_img {
      height: 20%
 }
+
+.header_button {
+     border: 1px solid #6D6D6D;
+     border-radius: 30px;
+}
