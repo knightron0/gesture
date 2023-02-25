@@ -124,10 +124,11 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SAw-p7-1Xb">
-                                <rect key="frame" x="20" y="110" width="369" height="370"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4Q-tO-aku">
+                                <rect key="frame" x="32" y="110" width="350" height="350"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </arscnView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RVn-Bd-ux4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -145,7 +146,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="v70-CX-eWB"/>
                     <connections>
-                        <outlet property="arView" destination="SAw-p7-1Xb" id="AyJ-Ef-gl2"/>
                         <outlet property="detectButtonASL" destination="GoO-ru-Amk" id="22O-p2-6AD"/>
                         <outlet property="letterPicker" destination="EZ0-ob-LMs" id="s5i-TP-9jC"/>
                     </connections>
