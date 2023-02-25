@@ -39,7 +39,8 @@ html {
 body {
      color: #666666;
      font-size: 14px;
-     font-family: 'Raleway', sans-serif;
+     font-family: 'Sen', sans-serif;
+     font-weight: lighter;
      line-height: 1.80857;
      font-weight: normal;
 }
@@ -143,11 +144,7 @@ a,
 .btn {
      text-decoration: none !important;
      outline: none !important;
-     -webkit-transition: all .3s ease-in-out;
-     -moz-transition: all .3s ease-in-out;
-     -ms-transition: all .3s ease-in-out;
-     -o-transition: all .3s ease-in-out;
-     transition: all .3s ease-in-out;
+     
 }
 
 img {
@@ -451,7 +448,8 @@ ul.btn li:last-child {
 
 .login_btn a:hover {
      color: #fff !important;
-     background: #0808ff;
+     background: rgb(224,90,102);
+     background: linear-gradient(90deg, rgba(224,90,102,1) 0%, rgba(143,80,215,1) 100%);
 }
 
 
@@ -468,7 +466,7 @@ ul.btn li:last-child {
      background-repeat: no-repeat;
      min-height: 700px;
      background-size: 100% 100%;
-     padding-left: 60px;
+     padding:0 !important;
 }
 
 .header {
@@ -546,17 +544,19 @@ ul.btn li:last-child {
      color: #000;
      font-weight: 500;
      padding: 13px 0px;
+     margin-top: 25px;
      width: 100%;
      max-width: 190px;
      text-align: center;
      display: inline-block;
-     transition: ease-in all 0.5s;
+     transition: ease-in all 0.0s;
 }
 
 .text-bg a:hover {
-     background-color: #292e39;
+     background: rgb(224,90,102);
+     background: linear-gradient(90deg, rgba(224,90,102,1) 0%, rgba(143,80,215,1) 100%);
      color: #fff;
-     transition: ease-in all 0.5s;
+     transition: ease-in all 0.0s;
 }
 
 .titlepage {
@@ -982,3 +982,13 @@ ul.social_icon li a:hover {
 
 
 /** end footer **/
+
+
+.logo_img {
+     width: 50%;
+     object-fit: cover;
+}
+
+.hand_img {
+     height: 20%
+}
