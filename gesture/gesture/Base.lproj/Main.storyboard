@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,15 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ftl-Aj-cGm">
-                                <rect key="frame" x="87" y="195" width="240" height="160"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JlP-Ba-Z5o">
-                                <rect key="frame" x="58" y="556" width="298" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JlP-Ba-Z5o">
+                                <rect key="frame" x="101" y="460" width="212" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="212" id="LXb-NX-B47"/>
+                                    <constraint firstAttribute="height" constant="55" id="XMY-RY-aHl"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="view">
+                                        <fragment content="Learn">
                                             <attributes>
                                                 <font key="NSFont" size="19" name="Avenir-Heavy"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -36,12 +37,16 @@
                                     <segue destination="6yF-27-NWx" kind="show" id="whP-kM-1lk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apc-0U-rD4">
-                                <rect key="frame" x="58" y="648" width="298" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apc-0U-rD4">
+                                <rect key="frame" x="101" y="542" width="212" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="74i-hy-iog"/>
+                                    <constraint firstAttribute="width" constant="212" id="sty-ts-0r2"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="interpret">
+                                        <fragment content="Interpret">
                                             <attributes>
                                                 <font key="NSFont" size="19" name="Avenir-Heavy"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -49,21 +54,18 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <segue destination="16B-C0-S1l" kind="presentation" id="SgU-ZY-Pg9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BQr-9P-QyV"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="apc-0U-rD4" firstAttribute="top" secondItem="JlP-Ba-Z5o" secondAttribute="bottom" constant="33" id="0Be-j1-oda"/>
-                            <constraint firstItem="ftl-Aj-cGm" firstAttribute="leading" secondItem="BQr-9P-QyV" secondAttribute="leading" constant="87" id="4Es-58-Lem"/>
-                            <constraint firstItem="apc-0U-rD4" firstAttribute="leading" secondItem="BQr-9P-QyV" secondAttribute="leading" constant="58" id="6TN-w2-wOy"/>
-                            <constraint firstItem="JlP-Ba-Z5o" firstAttribute="top" secondItem="ftl-Aj-cGm" secondAttribute="bottom" constant="201" id="OqL-cd-xNv"/>
-                            <constraint firstItem="BQr-9P-QyV" firstAttribute="trailing" secondItem="apc-0U-rD4" secondAttribute="trailing" constant="58" id="Qmy-ke-khZ"/>
-                            <constraint firstItem="BQr-9P-QyV" firstAttribute="bottom" secondItem="apc-0U-rD4" secondAttribute="bottom" constant="197" id="XRR-7M-NOd"/>
-                            <constraint firstItem="ftl-Aj-cGm" firstAttribute="top" secondItem="BQr-9P-QyV" secondAttribute="top" constant="147" id="jbp-mx-pv0"/>
-                            <constraint firstItem="JlP-Ba-Z5o" firstAttribute="leading" secondItem="BQr-9P-QyV" secondAttribute="leading" constant="58" id="mNS-Ah-MJp"/>
-                            <constraint firstItem="BQr-9P-QyV" firstAttribute="trailing" secondItem="JlP-Ba-Z5o" secondAttribute="trailing" constant="58" id="vbo-j2-Kbg"/>
-                            <constraint firstItem="BQr-9P-QyV" firstAttribute="trailing" secondItem="ftl-Aj-cGm" secondAttribute="trailing" constant="87" id="xmY-JL-Gdf"/>
+                            <constraint firstItem="BQr-9P-QyV" firstAttribute="bottom" secondItem="apc-0U-rD4" secondAttribute="bottom" constant="265" id="6HV-dp-NhK"/>
+                            <constraint firstItem="apc-0U-rD4" firstAttribute="top" secondItem="JlP-Ba-Z5o" secondAttribute="bottom" constant="27" id="ANW-7I-Cle"/>
+                            <constraint firstItem="JlP-Ba-Z5o" firstAttribute="centerX" secondItem="WRK-Zv-OFV" secondAttribute="centerX" id="cHp-5e-eAL"/>
+                            <constraint firstItem="apc-0U-rD4" firstAttribute="centerX" secondItem="WRK-Zv-OFV" secondAttribute="centerX" id="pUu-nG-zqn"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -84,28 +86,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMa-Wf-4W5">
-                                <rect key="frame" x="0.0" y="67" width="414" height="24"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Learn ASL">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <font key="NSFont" size="17" name="Avenir-Medium"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoO-ru-Amk">
-                                <rect key="frame" x="19" y="67" width="74" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="detect"/>
-                                <connections>
-                                    <action selector="detectImage:" destination="6yF-27-NWx" eventType="touchUpInside" id="AeK-Za-vGN"/>
-                                </connections>
-                            </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZ0-ob-LMs">
                                 <rect key="frame" x="0.0" y="668" width="414" height="112"/>
                                 <constraints>
@@ -115,7 +95,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lje-bb-TlC">
                                 <rect key="frame" x="0.0" y="637" width="414" height="24"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Letter to learn:">
+                                    <fragment content="Letter to learn">
                                         <attributes>
                                             <font key="NSFont" size="17" name="Avenir-Medium"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -124,39 +104,128 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B4Q-tO-aku">
-                                <rect key="frame" x="32" y="110" width="350" height="350"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bUP-0g-U4k">
+                                <rect key="frame" x="20" y="67" width="374" height="448"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acL-Te-PmJ">
+                                <rect key="frame" x="74" y="550" width="266" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="gray" title="AR Reference View" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="showARView:" destination="6yF-27-NWx" eventType="touchUpInside" id="R96-15-AHR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Learn ASL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3U-1V-XAO">
+                                <rect key="frame" x="20" y="4" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RVn-Bd-ux4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EZ0-ob-LMs" firstAttribute="trailing" secondItem="RVn-Bd-ux4" secondAttribute="trailing" id="8si-vK-KDV"/>
                             <constraint firstItem="lje-bb-TlC" firstAttribute="leading" secondItem="RVn-Bd-ux4" secondAttribute="leading" id="AS1-5e-0cL"/>
-                            <constraint firstItem="BMa-Wf-4W5" firstAttribute="top" secondItem="NIr-ho-3o0" secondAttribute="topMargin" constant="19" id="GVG-no-yjj"/>
                             <constraint firstItem="EZ0-ob-LMs" firstAttribute="top" secondItem="lje-bb-TlC" secondAttribute="bottom" constant="7" id="JRG-ki-yRo"/>
-                            <constraint firstItem="BMa-Wf-4W5" firstAttribute="leading" secondItem="RVn-Bd-ux4" secondAttribute="leading" id="R6u-PR-bhN"/>
                             <constraint firstItem="lje-bb-TlC" firstAttribute="trailing" secondItem="RVn-Bd-ux4" secondAttribute="trailing" id="Tp5-Kx-eff"/>
                             <constraint firstItem="RVn-Bd-ux4" firstAttribute="bottom" secondItem="EZ0-ob-LMs" secondAttribute="bottom" constant="58" id="aYL-KN-RSt"/>
                             <constraint firstItem="EZ0-ob-LMs" firstAttribute="leading" secondItem="RVn-Bd-ux4" secondAttribute="leading" id="ezt-N4-hCb"/>
-                            <constraint firstItem="BMa-Wf-4W5" firstAttribute="trailing" secondItem="RVn-Bd-ux4" secondAttribute="trailing" id="o9F-8H-1Ki"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="v70-CX-eWB"/>
                     <connections>
-                        <outlet property="detectButtonASL" destination="GoO-ru-Amk" id="22O-p2-6AD"/>
                         <outlet property="letterPicker" destination="EZ0-ob-LMs" id="s5i-TP-9jC"/>
+                        <outlet property="previewView" destination="bUP-0g-U4k" id="fRq-rr-y64"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ln5-na-QAx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.81159420289862" y="133.92857142857142"/>
+            <point key="canvasLocation" x="1076.8115942028987" y="-185.49107142857142"/>
+        </scene>
+        <!--InterpretASL View Controller-->
+        <scene sceneID="mIO-U0-zxn">
+            <objects>
+                <viewController id="16B-C0-S1l" customClass="InterpretASLViewController" customModule="gesture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lXt-3N-YVn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W8n-D1-tpt" userLabel="Preview View">
+                                <rect key="frame" x="20" y="64" width="374" height="422"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0s0-2d-8Wo">
+                                <rect key="frame" x="102" y="569" width="211" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Log Letter" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logPredictedLetter" destination="16B-C0-S1l" eventType="touchUpInside" id="f12-EQ-kj9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="72n-I8-g59">
+                                <rect key="frame" x="102" y="645" width="211" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Log Space" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logSpaceToTranscript" destination="16B-C0-S1l" eventType="touchUpInside" id="HVO-mk-adB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQd-xu-bTH">
+                                <rect key="frame" x="102" y="721" width="211" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Clear Transcript" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clearTranscript" destination="16B-C0-S1l" eventType="touchUpInside" id="JLt-R7-Djl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interpret ASL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBd-wZ-Yau">
+                                <rect key="frame" x="20" y="1" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmg-wi-T6h">
+                                <rect key="frame" x="20" y="514" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p4R-BI-cxX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="aslTranscript" destination="Wmg-wi-T6h" id="efZ-lf-oKZ"/>
+                        <outlet property="logLetter" destination="0s0-2d-8Wo" id="4EY-wQ-BC8"/>
+                        <outlet property="logSpace" destination="72n-I8-g59" id="qAU-28-DUB"/>
+                        <outlet property="previewView" destination="W8n-D1-tpt" id="Jpn-dq-sWM"/>
+                        <outlet property="view" destination="lXt-3N-YVn" id="KPn-2O-BS6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nra-zy-bEG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076.8115942028987" y="547.76785714285711"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="3120" height="2640"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

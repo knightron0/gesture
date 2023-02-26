@@ -7,9 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		426BF2EF29AAF27300B2192B /* A.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF2EE29AAF27300B2192B /* A.rcproject */; };
+		426BF2FE29AB013300B2192B /* C.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF2FA29AB013000B2192B /* C.rcproject */; };
+		426BF2FF29AB013300B2192B /* D.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF2FB29AB013100B2192B /* D.rcproject */; };
+		426BF30029AB013300B2192B /* B.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF2FC29AB013200B2192B /* B.rcproject */; };
+		426BF30129AB013300B2192B /* E.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF2FD29AB013300B2192B /* E.rcproject */; };
+		426BF31129AB02EB00B2192B /* InterpretASLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31029AB02EB00B2192B /* InterpretASLViewController.swift */; };
+		426BF32729AB1A5900B2192B /* S.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31229AB1A4F00B2192B /* S.rcproject */; };
+		426BF32829AB1A5900B2192B /* J.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31329AB1A4F00B2192B /* J.rcproject */; };
+		426BF32929AB1A5900B2192B /* O.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31429AB1A5000B2192B /* O.rcproject */; };
+		426BF32A29AB1A5900B2192B /* H.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31529AB1A5000B2192B /* H.rcproject */; };
+		426BF32B29AB1A5900B2192B /* X.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31629AB1A5100B2192B /* X.rcproject */; };
+		426BF32C29AB1A5900B2192B /* R.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31729AB1A5100B2192B /* R.rcproject */; };
+		426BF32D29AB1A5900B2192B /* Z.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31829AB1A5200B2192B /* Z.rcproject */; };
+		426BF32E29AB1A5900B2192B /* M.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31929AB1A5200B2192B /* M.rcproject */; };
+		426BF32F29AB1A5900B2192B /* Q.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31A29AB1A5300B2192B /* Q.rcproject */; };
+		426BF33029AB1A5900B2192B /* V.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31B29AB1A5300B2192B /* V.rcproject */; };
+		426BF33129AB1A5900B2192B /* Y.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31C29AB1A5300B2192B /* Y.rcproject */; };
+		426BF33229AB1A5900B2192B /* W.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31D29AB1A5400B2192B /* W.rcproject */; };
+		426BF33329AB1A5900B2192B /* L.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31E29AB1A5500B2192B /* L.rcproject */; };
+		426BF33429AB1A5900B2192B /* N.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF31F29AB1A5500B2192B /* N.rcproject */; };
+		426BF33529AB1A5900B2192B /* U.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF32029AB1A5600B2192B /* U.rcproject */; };
+		426BF33629AB1A5900B2192B /* I.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF32129AB1A5600B2192B /* I.rcproject */; };
+		426BF33729AB1A5900B2192B /* P.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF32229AB1A5700B2192B /* P.rcproject */; };
+		426BF33829AB1A5900B2192B /* K.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF32329AB1A5800B2192B /* K.rcproject */; };
+		426BF33929AB1A5900B2192B /* F.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF32429AB1A5800B2192B /* F.rcproject */; };
+		426BF33A29AB1A5900B2192B /* G.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF32529AB1A5800B2192B /* G.rcproject */; };
+		426BF33B29AB1A5900B2192B /* T.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 426BF32629AB1A5900B2192B /* T.rcproject */; };
 		7122936B29A9D6CC00C2AD1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122936A29A9D6CC00C2AD1C /* AppDelegate.swift */; };
 		7122936D29A9D6CC00C2AD1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122936C29A9D6CC00C2AD1C /* ViewController.swift */; };
-		7122936F29A9D6CC00C2AD1C /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 7122936E29A9D6CC00C2AD1C /* Experience.rcproject */; };
 		7122937229A9D6CC00C2AD1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7122937029A9D6CC00C2AD1C /* Main.storyboard */; };
 		7122937429A9D6CD00C2AD1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7122937329A9D6CD00C2AD1C /* Assets.xcassets */; };
 		7122937729A9D6CD00C2AD1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7122937529A9D6CD00C2AD1C /* LaunchScreen.storyboard */; };
@@ -38,10 +64,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		426BF2E329AAAEC200B2192B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		426BF2EE29AAF27300B2192B /* A.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = A.rcproject; sourceTree = "<group>"; };
+		426BF2FA29AB013000B2192B /* C.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = C.rcproject; sourceTree = "<group>"; };
+		426BF2FB29AB013100B2192B /* D.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = D.rcproject; sourceTree = "<group>"; };
+		426BF2FC29AB013200B2192B /* B.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = B.rcproject; sourceTree = "<group>"; };
+		426BF2FD29AB013300B2192B /* E.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = E.rcproject; sourceTree = "<group>"; };
+		426BF31029AB02EB00B2192B /* InterpretASLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpretASLViewController.swift; sourceTree = "<group>"; };
+		426BF31229AB1A4F00B2192B /* S.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = S.rcproject; sourceTree = "<group>"; };
+		426BF31329AB1A4F00B2192B /* J.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = J.rcproject; sourceTree = "<group>"; };
+		426BF31429AB1A5000B2192B /* O.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = O.rcproject; sourceTree = "<group>"; };
+		426BF31529AB1A5000B2192B /* H.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = H.rcproject; sourceTree = "<group>"; };
+		426BF31629AB1A5100B2192B /* X.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = X.rcproject; sourceTree = "<group>"; };
+		426BF31729AB1A5100B2192B /* R.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = R.rcproject; sourceTree = "<group>"; };
+		426BF31829AB1A5200B2192B /* Z.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Z.rcproject; sourceTree = "<group>"; };
+		426BF31929AB1A5200B2192B /* M.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = M.rcproject; sourceTree = "<group>"; };
+		426BF31A29AB1A5300B2192B /* Q.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Q.rcproject; sourceTree = "<group>"; };
+		426BF31B29AB1A5300B2192B /* V.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = V.rcproject; sourceTree = "<group>"; };
+		426BF31C29AB1A5300B2192B /* Y.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Y.rcproject; sourceTree = "<group>"; };
+		426BF31D29AB1A5400B2192B /* W.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = W.rcproject; sourceTree = "<group>"; };
+		426BF31E29AB1A5500B2192B /* L.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = L.rcproject; sourceTree = "<group>"; };
+		426BF31F29AB1A5500B2192B /* N.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = N.rcproject; sourceTree = "<group>"; };
+		426BF32029AB1A5600B2192B /* U.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = U.rcproject; sourceTree = "<group>"; };
+		426BF32129AB1A5600B2192B /* I.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = I.rcproject; sourceTree = "<group>"; };
+		426BF32229AB1A5700B2192B /* P.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = P.rcproject; sourceTree = "<group>"; };
+		426BF32329AB1A5800B2192B /* K.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = K.rcproject; sourceTree = "<group>"; };
+		426BF32429AB1A5800B2192B /* F.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = F.rcproject; sourceTree = "<group>"; };
+		426BF32529AB1A5800B2192B /* G.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = G.rcproject; sourceTree = "<group>"; };
+		426BF32629AB1A5900B2192B /* T.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = T.rcproject; sourceTree = "<group>"; };
 		7122936729A9D6CC00C2AD1C /* gesture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gesture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7122936A29A9D6CC00C2AD1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7122936C29A9D6CC00C2AD1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7122936E29A9D6CC00C2AD1C /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		7122937129A9D6CC00C2AD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7122937329A9D6CD00C2AD1C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7122937629A9D6CD00C2AD1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,12 +155,39 @@
 		7122936929A9D6CC00C2AD1C /* gesture */ = {
 			isa = PBXGroup;
 			children = (
+				426BF2E329AAAEC200B2192B /* Info.plist */,
 				712293A329AA8B2000C2AD1C /* detect.mlpackage */,
 				7122936A29A9D6CC00C2AD1C /* AppDelegate.swift */,
 				7122936C29A9D6CC00C2AD1C /* ViewController.swift */,
-				7122936E29A9D6CC00C2AD1C /* Experience.rcproject */,
-				7122937029A9D6CC00C2AD1C /* Main.storyboard */,
 				7122939929A9EB9B00C2AD1C /* learnASL.swift */,
+				426BF31029AB02EB00B2192B /* InterpretASLViewController.swift */,
+				7122937029A9D6CC00C2AD1C /* Main.storyboard */,
+				426BF2EE29AAF27300B2192B /* A.rcproject */,
+				426BF2FC29AB013200B2192B /* B.rcproject */,
+				426BF2FA29AB013000B2192B /* C.rcproject */,
+				426BF2FB29AB013100B2192B /* D.rcproject */,
+				426BF2FD29AB013300B2192B /* E.rcproject */,
+				426BF32429AB1A5800B2192B /* F.rcproject */,
+				426BF32529AB1A5800B2192B /* G.rcproject */,
+				426BF31529AB1A5000B2192B /* H.rcproject */,
+				426BF32129AB1A5600B2192B /* I.rcproject */,
+				426BF31329AB1A4F00B2192B /* J.rcproject */,
+				426BF32329AB1A5800B2192B /* K.rcproject */,
+				426BF31E29AB1A5500B2192B /* L.rcproject */,
+				426BF31929AB1A5200B2192B /* M.rcproject */,
+				426BF31F29AB1A5500B2192B /* N.rcproject */,
+				426BF31429AB1A5000B2192B /* O.rcproject */,
+				426BF32229AB1A5700B2192B /* P.rcproject */,
+				426BF31A29AB1A5300B2192B /* Q.rcproject */,
+				426BF31729AB1A5100B2192B /* R.rcproject */,
+				426BF31229AB1A4F00B2192B /* S.rcproject */,
+				426BF32629AB1A5900B2192B /* T.rcproject */,
+				426BF32029AB1A5600B2192B /* U.rcproject */,
+				426BF31B29AB1A5300B2192B /* V.rcproject */,
+				426BF31D29AB1A5400B2192B /* W.rcproject */,
+				426BF31629AB1A5100B2192B /* X.rcproject */,
+				426BF31C29AB1A5300B2192B /* Y.rcproject */,
+				426BF31829AB1A5200B2192B /* Z.rcproject */,
 				7122937329A9D6CD00C2AD1C /* Assets.xcassets */,
 				7122937529A9D6CD00C2AD1C /* LaunchScreen.storyboard */,
 			);
@@ -262,11 +342,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426BF33229AB1A5900B2192B /* W.rcproject in Sources */,
+				426BF32E29AB1A5900B2192B /* M.rcproject in Sources */,
+				426BF2EF29AAF27300B2192B /* A.rcproject in Sources */,
+				426BF33429AB1A5900B2192B /* N.rcproject in Sources */,
+				426BF33B29AB1A5900B2192B /* T.rcproject in Sources */,
+				426BF31129AB02EB00B2192B /* InterpretASLViewController.swift in Sources */,
+				426BF2FF29AB013300B2192B /* D.rcproject in Sources */,
+				426BF33629AB1A5900B2192B /* I.rcproject in Sources */,
 				712293A429AA8B2000C2AD1C /* detect.mlpackage in Sources */,
+				426BF32929AB1A5900B2192B /* O.rcproject in Sources */,
+				426BF33529AB1A5900B2192B /* U.rcproject in Sources */,
+				426BF32D29AB1A5900B2192B /* Z.rcproject in Sources */,
+				426BF33329AB1A5900B2192B /* L.rcproject in Sources */,
+				426BF33829AB1A5900B2192B /* K.rcproject in Sources */,
 				7122936D29A9D6CC00C2AD1C /* ViewController.swift in Sources */,
+				426BF2FE29AB013300B2192B /* C.rcproject in Sources */,
+				426BF32C29AB1A5900B2192B /* R.rcproject in Sources */,
+				426BF30129AB013300B2192B /* E.rcproject in Sources */,
+				426BF33729AB1A5900B2192B /* P.rcproject in Sources */,
+				426BF33029AB1A5900B2192B /* V.rcproject in Sources */,
+				426BF32829AB1A5900B2192B /* J.rcproject in Sources */,
+				426BF32A29AB1A5900B2192B /* H.rcproject in Sources */,
 				7122936B29A9D6CC00C2AD1C /* AppDelegate.swift in Sources */,
-				7122936F29A9D6CC00C2AD1C /* Experience.rcproject in Sources */,
+				426BF32F29AB1A5900B2192B /* Q.rcproject in Sources */,
+				426BF32B29AB1A5900B2192B /* X.rcproject in Sources */,
+				426BF33A29AB1A5900B2192B /* G.rcproject in Sources */,
+				426BF33129AB1A5900B2192B /* Y.rcproject in Sources */,
 				7122939A29A9EB9B00C2AD1C /* learnASL.swift in Sources */,
+				426BF32729AB1A5900B2192B /* S.rcproject in Sources */,
+				426BF30029AB013300B2192B /* B.rcproject in Sources */,
+				426BF33929AB1A5900B2192B /* F.rcproject in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,8 +549,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S42WJWPTMB;
+				DEVELOPMENT_TEAM = RSVM964K7V;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gesture/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -458,7 +565,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = teambo.gesture;
+				PRODUCT_BUNDLE_IDENTIFIER = teambo.gesture.arya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -473,8 +580,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S42WJWPTMB;
+				DEVELOPMENT_TEAM = RSVM964K7V;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = gesture/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -488,7 +596,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = teambo.gesture;
+				PRODUCT_BUNDLE_IDENTIFIER = teambo.gesture.arya;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
