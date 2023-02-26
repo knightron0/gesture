@@ -32,6 +32,15 @@
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
       media="screen">
+   <script type="importmap">
+      {
+            "imports": {
+               "three": "https://unpkg.com/three@0.138.0/build/three.module.js",
+               "OrbitControls": "https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js",
+               "OBJLoader": "https://unpkg.com/three@0.150.0/examples/jsm/loaders/OBJLoader.js"
+            }
+      }
+   </script>
    <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -75,7 +84,7 @@
          <div id="displays" class="displays">
             <div class="container-fluid" style="padding: 30px;" >
                <center>
-                  <div class="vid">
+                  <div class="vid" id="vid">
                      <video id="video" width="1000" height="560" autoplay>
                      </video>
                      <canvas id="vid_canvas" style="display:none;" width="100%" height="100%">
@@ -114,9 +123,53 @@
    <div class="overlay"></div>
    <!-- Javascript files-->
    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+   
+   <script type="module">
+      import * as THREE from 'three';
+      import * as OrbitControls from 'OrbitControls'
+      import * as OBJLoader from 'OBJLoader'
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth/2, window.innerHeight/2);
+      document.getElementById("vid").appendChild(renderer.domElement)
+
+      const loader = new OBJLoader.OBJLoader();
+      const light = new THREE.PointLight( 0xffffff, 1, 100 );
+      light.position.set( 10, 10, 10 );
+      scene.add(light)
+      let letter;
+      console.log(new THREE.Vector3(1,1,1))
+      loader.load("assets/A.obj",
+         function (object) {
+            object.position.set(0, 0, 0);
+            object.scale.set(10,10,10);
+            scene.add(object);
+            letter = object;
+         },
+         function (xhr) {
+            console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+         },
+         function (error) {
+            console.log(error);
+         }
+      );
+      
+
+      camera.position.z = 5;
+      camera.position.y = 2;
+
+      function animate() {
+         requestAnimationFrame( animate );
+         letter.rotation.y += 0.02;
+         renderer.render( scene, camera );
+      }
+      animate();
+   </script>
    <script>
       function evaluateImage() {
-         console.log("dajksdhjfas")
          const video = document.getElementById("video");
          const canvas = document.createElement("canvas");
          // scale the canvas accordingly
