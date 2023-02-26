@@ -84,12 +84,14 @@
          <div id="displays" class="displays">
             <div class="container-fluid" style="padding: 30px;" >
                <center>
-                  <div class="vid" id="vid">
-                     <video id="video" width="1000" height="560" autoplay>
-                     </video>
-                     <canvas id="vid_canvas" style="display:none;" width="100%" height="100%">
-                     </canvas>
-                     <img id="video_image" style="display: none;"/>
+                  <div class="row" id="vid_container">
+                     <div class="vid" id="vid" >
+                        <video id="video" width="1000" height="560" autoplay>
+                        </video>
+                        <canvas id="vid_canvas" style="display:none;" width="100%" height="100%">
+                        </canvas>
+                        <img id="video_image" style="display: none;"/>
+                     </div>
                   </div>
                </center>
             </div>
@@ -100,12 +102,45 @@
          <div id="options" class="options">
             <div class="container-fluid" >
                <div class="row d_flex" width="100%" >
-                  <div class="col-md-6">
+                  <div class="col-md-5">
                      <ul class="btn">
                         <li class="login_btn"><a class="header_button" onclick="evaluateImage()">Evaluate</a></li>
                      </ul>
                   </div>
-                  <div class="col-md-1">
+                  <div class="col-xs-2">
+                     <ul class="btn">
+                        Pick a letter:
+                        <select name="letter" id="letter_picker">
+                           <option value="A">A</option>
+                           <option value="B">B</option>
+                           <option value="C">C</option>
+                           <option value="D">D</option>
+                           <option value="E">E</option>
+                           <option value="F">F</option>
+                           <option value="G">G</option>
+                           <option value="H">H</option>
+                           <option value="I">I</option>
+                           <option value="J">J</option>
+                           <option value="K">K</option>
+                           <option value="L">L</option>
+                           <option value="M">M</option>
+                           <option value="N">N</option>
+                           <option value="O">O</option>
+                           <option value="P">P</option>
+                           <option value="Q">Q</option>
+                           <option value="R">R</option>
+                           <option value="S">S</option>
+                           <option value="T">T</option>
+                           <option value="U">U</option>
+                           <option value="V">V</option>
+                           <option value="W">W</option>
+                           <option value="X">X</option>
+                           <option value="Y">Y</option>
+                           <option value="Z">Z</option>
+                        </select>
+                     </ul>
+                  </div>
+                  <div class="col-xs-4">
                      <ul class="btn">
                         <li class="login_btn"><a class="header_button" onclick="resetVideo()">Reset</a></li>
                      </ul>
@@ -123,7 +158,7 @@
    <div class="overlay"></div>
    <!-- Javascript files-->
    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
-   
+
    <script type="module">
       import * as THREE from 'three';
       import * as OrbitControls from 'OrbitControls'
@@ -133,19 +168,21 @@
       const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
       const renderer = new THREE.WebGLRenderer();
-      renderer.setSize(window.innerWidth/2, window.innerHeight/2);
-      document.getElementById("vid").appendChild(renderer.domElement)
+      renderer.setSize(window.innerWidth/4, window.innerHeight/1.9);
+      document.getElementById("vid_container").appendChild(renderer.domElement)
 
       const loader = new OBJLoader.OBJLoader();
       const light = new THREE.PointLight( 0xffffff, 1, 100 );
       light.position.set( 10, 10, 10 );
       scene.add(light)
+
       let letter;
       console.log(new THREE.Vector3(1,1,1))
       loader.load("assets/A.obj",
          function (object) {
             object.position.set(0, 0, 0);
-            object.scale.set(10,10,10);
+            object.scale.set(15,15,15);
+            object.name = "prev";
             scene.add(object);
             letter = object;
          },
@@ -156,17 +193,67 @@
             console.log(error);
          }
       );
-      
+
 
       camera.position.z = 5;
       camera.position.y = 2;
 
       function animate() {
          requestAnimationFrame( animate );
-         letter.rotation.y += 0.02;
+         letter.rotation.y += 0.01;
          renderer.render( scene, camera );
       }
       animate();
+
+   </script>
+   <script type="module">
+      import * as THREE from 'three';
+      import * as OrbitControls from 'OrbitControls'
+      import * as OBJLoader from 'OBJLoader'
+      const selectElement = document.getElementById("letter_picker");
+
+      selectElement.addEventListener('change', (event) => {
+         const vidContainer = document.getElementById("vid_container");
+         vidContainer.removeChild(vidContainer.getElementsByTagName("canvas")[1]);
+         const scene = new THREE.Scene();
+         const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+         const renderer = new THREE.WebGLRenderer();
+         renderer.setSize(window.innerWidth/4, window.innerHeight/1.9);
+         document.getElementById("vid_container").appendChild(renderer.domElement)
+
+         const loader = new OBJLoader.OBJLoader();
+         const light = new THREE.PointLight( 0xffffff, 1, 100 );
+         light.position.set( 10, 10, 10 );
+         scene.add(light)
+
+         let letter;
+         console.log(new THREE.Vector3(1,1,1))
+         loader.load("assets/" + event.target.value + ".obj",
+            function (object) {
+               object.position.set(0, 0, 0);
+               object.scale.set(15,15,15);
+               object.name = "prev";
+               scene.add(object);
+               letter = object;
+            },
+            function (xhr) {
+               console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+            },
+            function (error) {
+               console.log(error);
+            }
+         );
+         camera.position.z = 5;
+         camera.position.y = 2;
+
+         function animate() {
+            requestAnimationFrame( animate );
+            letter.rotation.y += 0.01;
+            renderer.render( scene, camera );
+         }
+         animate();
+      });
    </script>
    <script>
       function evaluateImage() {
