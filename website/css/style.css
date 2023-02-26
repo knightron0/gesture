@@ -462,7 +462,7 @@ ul.btn li:last-child {
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 
 .header_full_banner {
-     background: url(../images/banner.jpg);
+     background: black;
      background-repeat: no-repeat;
      min-height: 700px;
      background-size: 100% 100%;
@@ -616,7 +616,7 @@ ul.btn li:last-child {
 }
 
 .about .titlepage {
-     text-align: right;
+     text-align: left;
      padding: 0;
      max-width: 541px;
      width: 100%;
@@ -996,4 +996,31 @@ ul.social_icon li a:hover {
 .header_button {
      border: 1px solid #6D6D6D;
      border-radius: 30px;
+}
+
+.grad {
+     background: linear-gradient(90deg, rgb(255, 86, 171) 0%, rgb(190, 85, 255) 100%);
+     -webkit-text-fill-color: transparent;
+     -webkit-background-clip: text;
+}
+
+#myVideo {
+     position: absolute;
+     filter: opacity(0.3);
+     right: 0;
+     bottom: 0;
+     min-width: 100%;
+     min-height: 100%;
+     max-width: 100%;
+     z-index: 0;
+   }
+   
+.z-2 {
+     z-index: 2;
+}
+
+.last-p {
+     margin-left: 20vh;
+     margin-right: 20vh;
+     align-self: center;
 }
