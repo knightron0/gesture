@@ -14,3 +14,5 @@ Through our mobile app, it’s extremely easy for people to start their journey 
 
 With gesture, you can unlock the power of ASL and join us in inspiring communication and cultivating connection.
 
+
+[![Demo video link](https://img.youtube.com/vi/oLDhkHwxStc/0.jpg)](http://www.youtube.com/watch?v=oLDhkHwxStc "gesture")
