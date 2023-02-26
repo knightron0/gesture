@@ -48,7 +48,7 @@
          <header>
             <!-- header inner -->
 
-               <div class="header">
+               <div class="header" style="background-color: black;">
                   <div class="container">
                      <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
@@ -73,27 +73,24 @@
          <!-- end banner -->
          <!-- displays -->
          <div id="displays" class="displays">
-            <div class="container-fluid">
-               <div class="row d_flex">
-                  <div class="col-md-6">
-                     <div class="booth">
-                        <video id="video" width="100%" height="100%" autoplay>
-                        </video>
-                        <canvas id="vid_canvas" style="display:none;" width="100%" height="100%">
-                        </canvas>
-                        <img id="video_image" style="display: none;"/>
-                     </div>
+            <div class="container-fluid" style="padding: 30px;" >
+               <center>
+                  <div class="vid">
+                     <video id="video" width="1000" height="560" autoplay>
+                     </video>
+                     <canvas id="vid_canvas" style="display:none;" width="100%" height="100%">
+                     </canvas>
+                     <img id="video_image" style="display: none;"/>
                   </div>
-               </div>
+               </center>
             </div>
          </div>
-         <div>
          <!-- end displays -->
 
          <!-- options -->
          <div id="options" class="options">
-            <div class="container-fluid">
-               <div class="row d_flex" width="100%">
+            <div class="container-fluid" >
+               <div class="row d_flex" width="100%" >
                   <div class="col-md-6">
                      <ul class="btn">
                         <li class="login_btn"><a class="header_button" onclick="evaluateImage()">Evaluate</a></li>
@@ -158,8 +155,8 @@
             context.rect(data["coords"][0], data["coords"][1], data["coords"][2], data["coords"][3]);
             context.lineWidth = 1;
             context.strokeStyle = 'black';
-            context.font = "30px Arial";
-            context.fillText(data["letter"] + " " + (data["conf"] * 100) + "%", data["coords"][0]+5, data["coords"][1]+5);
+            context.font = "20px Arial";
+            context.fillText(data["letter"] + ": " + (data["conf"] * 100).toFixed(2) + "%", data["coords"][0], data["coords"][1]-5);
             context.stroke();
          });
       }
