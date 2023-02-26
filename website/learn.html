@@ -60,7 +60,7 @@
                         </div>
                         <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                            <ul class="btn">
-                              <li class="login_btn"><a class="header_button" href="learn.html">Learn</a></li>
+                              <li class="login_btn"><a class="header_button" href="index.html">Home</a></li>
                            </ul>
                         </div>
                      </div>
@@ -71,30 +71,108 @@
             </div>
          </header>
          <!-- end banner -->
-         <!-- about -->
-         <div id="about" class="about">
+         <!-- displays -->
+         <div id="displays" class="displays">
             <div class="container-fluid">
                <div class="row d_flex">
                   <div class="col-md-6">
-                     <div class="about_img">
-                        <img src="images/about_img.png" class="hand_img" alt="#" />
-                     </div>
-                  </div>
-                  <div class="col-md-6">
-                     <div class="about_img">
-                        <img src="images/about_img.png" class="hand_img" alt="#" />
+                     <div class="booth">
+                        <video id="video" width="100%" height="100%" autoplay>
+                        </video>
+                        <canvas id="vid_canvas" style="display:none;" width="100%" height="100%">
+                        </canvas>
+                        <img id="video_image" style="display: none;"/>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <!-- end about -->
+         <div>
+         <!-- end displays -->
+
+         <!-- options -->
+         <div id="options" class="options">
+            <div class="container-fluid">
+               <div class="row d_flex" width="100%">
+                  <div class="col-md-6">
+                     <ul class="btn">
+                        <li class="login_btn"><a class="header_button" onclick="evaluateImage()">Evaluate</a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-1">
+                     <ul class="btn">
+                        <li class="login_btn"><a class="header_button" onclick="resetVideo()">Reset</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div>
+         <!-- end options -->
+
       </div>
 
 
    </div>
    <div class="overlay"></div>
    <!-- Javascript files-->
+   <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
+   <script>
+      function evaluateImage() {
+         console.log("dajksdhjfas")
+         const video = document.getElementById("video");
+         const canvas = document.createElement("canvas");
+         // scale the canvas accordingly
+         canvas.width = video.videoWidth;
+         canvas.height = video.videoHeight;
+         // draw the video at that frame
+         canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+         // convert it to a usable data URL
+         const dataURL = canvas.toDataURL();
+         video.style.display = "none";
+
+         const vidCanvas = document.getElementById("vid_canvas");
+         vidCanvas.width = video.videoWidth;
+         vidCanvas.height = video.videoHeight;
+         vidCanvas.style.display = null;
+
+         const vidImage = document.getElementById("video_image")
+         vidImage.src = dataURL
+         vidCanvas.getContext('2d').drawImage(vidImage, 0, 0, vidCanvas.width, vidCanvas.height)
+
+         fetch('http://localhost:5000/query', {
+            method: 'POST',
+            headers: {
+               'Accept': 'application/json',
+               'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+               "image": dataURL
+            })
+         }).then((response) => response.json()).then((data) => {
+            console.log(data)
+            const vidCanvas = document.getElementById("vid_canvas")
+            const vidImage = document.getElementById("video_image")
+            vidCanvas.getContext('2d').drawImage(vidImage, 0, 0, vidCanvas.width, vidCanvas.height);
+            const context = vidCanvas.getContext("2d");
+            context.rect(data["coords"][0], data["coords"][1], data["coords"][2], data["coords"][3]);
+            context.lineWidth = 1;
+            context.strokeStyle = 'black';
+            context.font = "30px Arial";
+            context.fillText(data["letter"] + " " + (data["conf"] * 100) + "%", data["coords"][0]+5, data["coords"][1]+5);
+            context.stroke();
+         });
+      }
+
+      function resetVideo() {
+         const video = document.getElementById("video");
+         video.style.display = "block";
+         const vidCanvas = document.getElementById("vid_canvas");
+         const vidImage = document.getElementById("video_image")
+         vidCanvas.style.display = "none"
+         vidImage.style.display = "none"
+      }
+   </script>
    <script src="js/jquery.min.js"></script>
    <script src="js/popper.min.js"></script>
    <script src="js/bootstrap.bundle.min.js"></script>
@@ -102,41 +180,20 @@
    <!-- sidebar -->
    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
    <script src="js/custom.js"></script>
-   <script type="text/javascript">
-      $(document).ready(function () {
-         $("#sidebar").mCustomScrollbar({
-            theme: "minimal"
-         });
 
-         $('#dismiss, .overlay').on('click', function () {
-            $('#sidebar').removeClass('active');
-            $('.overlay').removeClass('active');
-         });
-
-         $('#sidebarCollapse').on('click', function () {
-            $('#sidebar').addClass('active');
-            $('.overlay').addClass('active');
-            $('.collapse.in').toggleClass('in');
-            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-         });
-      });
-   </script>
+   <!-- webcam video -->
    <script>
-      $(document).ready(function () {
-         $(".fancybox").fancybox({
-            openEffect: "none",
-            closeEffect: "none"
-         });
-
-         $(".zoom").hover(function () {
-
-            $(this).addClass('transition');
-         }, function () {
-
-            $(this).removeClass('transition');
-         });
-      });
-   </script>
+      var video = document.getElementById('video'),
+         vendorUrl = window.URL || window.webkitURL;
+      if (navigator.mediaDevices.getUserMedia) {
+         navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                  video.srcObject = stream;
+            }).catch(function (error) {
+                  console.log("Something went wrong!");
+            });
+      }
+  </script>
 </body>
 
 </html>

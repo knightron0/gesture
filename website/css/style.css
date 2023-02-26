@@ -144,7 +144,7 @@ a,
 .btn {
      text-decoration: none !important;
      outline: none !important;
-     
+
 }
 
 img {
@@ -451,6 +451,8 @@ ul.btn li:last-child {
      background: rgb(224,90,102);
      background: linear-gradient(90deg, rgba(224,90,102,1) 0%, rgba(143,80,215,1) 100%);
 }
+
+
 
 
 /*-- header area --*/
@@ -1014,7 +1016,7 @@ ul.social_icon li a:hover {
      max-width: 100%;
      z-index: 0;
    }
-   
+
 .z-2 {
      z-index: 2;
 }
@@ -1023,4 +1025,10 @@ ul.social_icon li a:hover {
      margin-left: 20vh;
      margin-right: 20vh;
      align-self: center;
+}
+
+video {
+     transform: rotateY(180deg);
+     -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+     -moz-transform:rotateY(180deg); /* Firefox */
 }
